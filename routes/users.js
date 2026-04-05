@@ -4,7 +4,7 @@ const { authorize } = require('../middleware/roles.js');
 
 const router = express.Router();
 
-router.use(authorize(['admin']));
+router.use(authorize('admin'));
 
 router.get('/', getUsers);
 router.put('/:id', updateUser);

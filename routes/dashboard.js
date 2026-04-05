@@ -6,7 +6,7 @@ const { authorize } = require('../middleware/roles.js');
 const router = express.Router();
 
 router.use(protect);
-router.use(authorize(['analyst', 'admin']));
+router.use(authorize('analyst', 'admin'));
 
 router.get('/', getDashboard);
 
